@@ -8,7 +8,6 @@
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/trees"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="eclipselink.ddl-generation" value="create-tables"/>
-			<property name="javax.persistence.jdbc.password" value=""/>
 		</properties>
 	</persistence-unit>
 </persistence>

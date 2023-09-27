@@ -15,7 +15,7 @@ import models.Tree;
 /**
  * Servlet implementation class AddTree
  */
-@WebServlet("/forest/addForest")
+@WebServlet("/addForest")
 public class AddForest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

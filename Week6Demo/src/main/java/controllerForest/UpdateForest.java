@@ -15,7 +15,7 @@ import models.Tree;
 /**
  * Servlet implementation class UpdateTree
  */
-@WebServlet("/forest/updateForest")
+@WebServlet("/updateForest")
 public class UpdateForest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -42,7 +42,7 @@ public class UpdateForest extends HttpServlet {
 		forestToUpdate.setLocation(location);
 		helper.update(forestToUpdate);
 		
-		getServletContext().getRequestDispatcher("/Week6Demo/index.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 	}
 
 }

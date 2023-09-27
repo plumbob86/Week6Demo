@@ -34,7 +34,7 @@ public class ForestHelper {
 	public void delete(Forest model) {
 		EntityManager manager = factory.createEntityManager();
 		manager.getTransaction().begin();
-		manager.remove(manager.find(Tree.class, model.getForestId()));
+		manager.remove(manager.find(Forest.class, model.getForestId()));
 		manager.getTransaction().commit();
 		manager.close();
 	}
@@ -42,6 +42,7 @@ public class ForestHelper {
 	@SuppressWarnings("unchecked")
 	public List<Forest> showAllForests() {
 		EntityManager manager = factory.createEntityManager();
+		manager.clear();
 		Query q = manager.createQuery("SELECT i FROM forest i");
 		List<Forest> allItems = q.getResultList();
 		manager.close();
@@ -65,6 +66,7 @@ public class ForestHelper {
 		TypedQuery<Forest> query = manager.createQuery("SELECT i FROM forest AS i WHERE i.name = :name", Forest.class);
 		query.setParameter("name", name);
 		Forest dbEntity = query.getSingleResult();
+		manager.close();
 		return dbEntity;
 	}
 

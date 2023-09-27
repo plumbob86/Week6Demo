@@ -67,6 +67,7 @@ public class TreeHelper {
 		TypedQuery<Tree> query = manager.createQuery("SELECT i FROM trees AS i WHERE i.commonName = :commonName", Tree.class);
 		query.setParameter("commonName", oldName);
 		Tree dbEntity = query.getSingleResult();
+		manager.close();
 		return dbEntity;
 	}
 }

@@ -15,7 +15,7 @@ import models.Tree;
 /**
  * Servlet implementation class DeleteTree
  */
-@WebServlet("/forest/deleteForest")
+@WebServlet("/deleteForest")
 public class DeleteForest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -36,7 +36,7 @@ public class DeleteForest extends HttpServlet {
 		String name = request.getParameter("name");
 		Forest deleteable = helper.searchForestByName(name);
 		helper.delete(deleteable);
-		getServletContext().getRequestDispatcher("/Week6Demo/index.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 	}
 
 }

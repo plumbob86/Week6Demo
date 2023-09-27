@@ -26,7 +26,7 @@
 		</c:forEach>
 	</table>
 	<br />
-	<a href="/Week6Demo/index.jsp">Home</a>
+	<a href="index.jsp">Home</a>
 
 </body>
 </html>

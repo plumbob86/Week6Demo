@@ -15,12 +15,12 @@
 	<a href="update.jsp">Update Trees</a>
 	<a href="delete.jsp">Delete Trees</a>
 	<a href="add.jsp">Add Trees</a>
-	<form action="forest/showForest" method="get">
+	<form action="showForest" method="get">
 		<input type="submit" value="Show Forests" />
 	</form>
-	<a href="forest/update.jsp">Update Forest</a>
-	<a href="forest/delete.jsp">Delete Forest</a>
-	<a href="forest/add.jsp">Add Forest</a>
+	<a href="updateForest.jsp">Update Forest</a>
+	<a href="deleteForest.jsp">Delete Forest</a>
+	<a href="addForest.jsp">Add Forest</a>
 
 </body>
 </html>

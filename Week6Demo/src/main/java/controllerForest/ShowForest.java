@@ -18,7 +18,7 @@ import models.Tree;
 /**
  * Servlet implementation class ShowTrees
  */
-@WebServlet("/forest/showForest")
+@WebServlet("/showForest")
 public class ShowForest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -41,7 +41,7 @@ public class ShowForest extends HttpServlet {
 
 		request.setAttribute("allForests", forestList);
 		
-		String path = "/forest/show.jsp";
+		String path = "/showForest.jsp";
 		
 		getServletContext().getRequestDispatcher(path).forward(request, response);
 	}

@@ -29,7 +29,7 @@ public class Forest {
 	private int forestId;
 	private String location;
 	private String name;
-	@OneToMany(mappedBy = "forest")
+	@OneToMany(mappedBy = "forest", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Tree> trees;
 
 	public int getForestId() {
